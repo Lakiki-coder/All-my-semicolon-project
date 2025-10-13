@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Quadratic {
+
+public static void main(String [] args) {
+Scanner input = new Scanner(System.in);
+
+System.out.println("Enter first number a");
+int num1 = input.nextInt();
+
+System.out.println("Enter second number b");
+int num2 = input.nextInt();
+
+System.out.[println("Enter third number c");
+int num3 = input.nextInt();
+
+int solv1 = b * b - 4 * a * c;
+int solv2 = -b + Math.sqrt solv / 2 * a;
+int solv3 = -b - Math.sqrt solv / 2 * a;
+
+System.out.print("result r" + solv2);
+
+if(
+
+
