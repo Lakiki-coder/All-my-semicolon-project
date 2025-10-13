@@ -1,0 +1,223 @@
+>>>>field widths alignment control the width alignment of string or numbers.<<<<
+
+- uses:
+<for left alignment(give space before putting your variable. e.g print(f"{word: <10}") or print(f"{"", :<10}{word}"))
+>for right alignment
+center alignment(give space inbetween or center e.g )
+^string format()method(instead of using f format. e.g print(f".{"python", : ^ 10}.")
+note: the (.) space will not be counted and it is different from the 10 space
+note: the space occupied by "python" is 
+
+
+>>> stripping empty space from a sentence <<<<
+
+* concatenating and repeating string(using + to join and * to multiply string e.g "=" * 10)
+
+* strip() => e.g  
+word ="  laki   "
+print(word.strip()) this take out the space before and after the words
+you can spacify anything u want it to remove from the words or sentence e.g 
+word = "----python----"
+print(word.strip("-"))
+* lstrip() =>
+
+* rstrip() => this taken out the space 
+
+read on( *arg and  **kwarg)
+
+
+=> split e.g
+print(word.split())
+['laki']
+
+word = "094-49848-5098"
+print(word.split("-"))
+
+['094','4567','5043']
+
+print(word.strip("-",maxsplit:3)
+
+['094','4567','5043',094-49848-5098]
+
+=> count
+e.g word.count("k") or  word.count("k", 2)
+
+=> index
+- return first occurence
+- give index of character given in the peritences
+- e.g word.index("k",2,5) means give me the index of the k and start checking from the second index and stop at index 5
+- when u put a word ,it give u index of the first letter same as find method
+- raises an exception if the value is not found
+
+=> capitalize
+
+=> title
+
+=> find
+- if the word u put is not in the sentence or in the variable it wll print out -1
+
+=> isalnum
+
+=> .replace
+- word = "4*32454"
+- word.replace('4','2')
+- 2*32254
+
+
+=> join: 
+- word = "one two three"
+- print("-".join(word))
+- one-two-three
+- also a list same as split
+
+
+number = 12
+
+item = "fish"
+word = "the boy eat{} pieces of {}"
+
+print(wprd.format(number,item))
+or 
+word = "the boy eat{item_eaten} pieces of {number _of_pieces}"
+
+print(word.format(item_eaten = item,number_of_peices = number)
+
+or
+word = "the boy eat {1} pieces of {0} together with {3} bottle of {2}"
+print(word.format(number,item,item,drink,number_of_bottle
+
+
+=> RAW String 
+- raw_str = r"C:\Users\Name"
+- make use of this when u want to print a back slash in your code(\)
+
+
+
+>>>>>>REGULAR EXPRESSION( REGAX )<<<<<<<<<<<<<<
+
+- help u search.match, manipulate text using parttern
+- make use of 
+
+=> refullmatch to match thing   e.g
+- return match object and return none if nothing found
+import re
+
+# pattern 
+pattern = "29\04\2000"
+
+plan = "0987766"
+
+result = "Match" if refullmatch(pattern, plan) else no match
+
+=> re.sub
+
+  word = "t- steden_record = f"lakiki {} 5.2inches single"
+i = "5.2inches"
+
+replace_result = re.sub(plan, "6feet,stident
+
+print(replace_result)
+
+=\> Splitting Strings
+
+- e.g re.split(pattern, string)
+
+- e = "mail@gmail.com"
+- p =r"@"
+- re.split(p,t)
+-e.g p = r"."
+re.split(p,se[1])
+
+>>>>>>>ANOTHER SEARCH FUNCTION ACCESSING MATCHES<<<<<<<<<<<<<
+
+=> search()finds the first match.
+ - re.search(r"\d+","abc123xyz")
+output:123
+=> findal() finds all matches
+=> group() accesses matched text
+
+=> Regex is composed of simple characters such as  /abc/ or combination of simple special characters like /ab*c/
+=> uses
+
+- searching and pttern matching
+	- to locate specific text
+	- extracting informatin
+	-
+-data validation
+	-ENSURING DATA QUALITY
+-Text manipulation 
+-	-replacing text based on pattern
+
+>>>>>>>META CHARACTERS <<<<<<<<<<<<
+- THEY charater that does not represent their literal meaning
+- instead have a special function e.g
+-^,$,*,+,?,{},[],/,\,|
+
+- some escape when using it
+
+- (.) matching every character except new line
+- ^ matches the start of a string e.g ^Hello matches "Hello world
+- $ matches the end of a string. e.g world$ matches "hello world"
+- * matches 0 or more repetitiion. e.g a* -> "","a","aaaa"
+- + matches 1 or more repetition. e.g a+ -> "a","aaa"
+- ? matches 1 or 0 repetition. e.g a? -> a"","a"
+- {} use for exact or limited repetition e.g \d{4}, a{3} -> "aaa", a{2,} -> 2 or more, a{2,4} -> can be 2 or 3 but 4 is not included
+- [] use to donate a charater class
+- () use for grouping and capturing
+- (\) escape spacial character or gives them special meaning
+- (+) match 1 or more repetition
+- (?) match 0 or 1 repetition(option)
+- \b word boundry (whuite space or non alphnumeric) e.g \bword\b
+-  thing that are allow are: whiute space,symbol,accsflag around d character
+- e.g string = "muse@yahoomail
+- string "ola@#&yahoo.mail
+- pattern = r"\b@\b"
+=> e.g
+- i = "i eat at the resturant "
+- p = r"\bat\b
+- print(re.findall(p,i))
+
+- \B not a boundry 
+- \d for matching numbers
+- \D not number
+- \w letter,underscore_,digit,egde case
+- \W not word character e.g !,#,@
+- \s white spaces(tab,newline) e.g "abc"
+- \S not whitespace
+- (.) any character except whitespace e.g "a"
+
+
+>>>>>>>>>CHARACTER SET<<<<<<<<<
+- [abc] matches a or b or c e.g "apple" matches a
+- [^abc] not a,b or c "def" matches d,e,f
+- [a-z] Any lowercase letter e.g "h"
+- [0-9] any digit
+
+>>>>>COMMON RE FUNCTION<<<<<<<<<
+
+- re.MATCH(PATTERN STRING)
+- re.fullmatch(patter,string)
+- re.search(pattern, string)
+- re.findall(pattern,string)
+
+=> re.finditer(pattern,string)
+=> re.sub(pattern.replace,string)
+=> re.split(pattern,strinig)
+=> re.compile(pattern)
+
+sen = "i was e at e resturant by 10 yesterday and i 
+
+patt = r"\d+"
+patt = re.compile(patt)
+print(pattern.findall(sentence))
+or to split
+print(patt.split(sen))
+
+or sub
+print(ptt.sub("    ,sentence))
+
+>>>>>>>>FLAG <<<<<<<<<<
+
+- in regex they are modifiers that change how the interpreted. such as re.findall, re.search
+
+print(re.fuulserach(patt,sen.flag = re.IGNORECASE)) or reNOFLAG
